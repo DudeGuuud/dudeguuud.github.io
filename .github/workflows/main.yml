@@ -13,11 +13,11 @@ jobs:
         node-version: [23.11.0]
 
     steps:
-      - name: 开始运行
-        uses: actions/checkout@v1
+      - name: 检出代码
+        uses: actions/checkout@v4
 
-      - name: 设置 Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -25,25 +25,29 @@ jobs:
         run: |
           export TZ='Asia/Shanghai'
           npm install hexo-cli -g
-      - name: 缓存
+
+      - name: 缓存依赖
         uses: actions/cache@v4
         id: cache-dependencies
         with:
           path: node_modules
-          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: 安装插件
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: 
-          npm install
+        run: npm install
 
-      - name: 部署博客
-        run: 
-          hexo clean && hexo g
-          cd ./public
-          git init
-          git config user.name "${{secrets.GIT_NAME}}"
-          git config user.email "${{secrets.GIT_EMAIL}}"
-          git add .
-          git commit -m "Update"
-          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" main:main
+      - name: 生成静态文件
+        run: |
+          hexo clean
+          hexo generate
+
+      - name: 检查 public 目录
+        run: ls -la ./public
+
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./public
+          publish_branch: main  # 或者改为 gh-pages 或者 master 如果需要
