@@ -5,9 +5,13 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         node-version: [23.11.0]
@@ -21,10 +25,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 安装 Hexo
-        run: |
-          export TZ='Asia/Shanghai'
-          npm install hexo-cli -g
+      - name: 记录开始时间
+        run: echo "START_TIME=$(date +%s)" >> $GITHUB_ENV
 
       - name: 缓存依赖
         uses: actions/cache@v4
@@ -32,15 +34,27 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-      - name: 安装插件
+      - name: 安装依赖
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
+
+      - name: 记录安装时间
+        run: |
+          END_TIME=$(date +%s)
+          echo "Install duration: $((END_TIME - START_TIME)) seconds"
 
       - name: 生成静态文件
         run: |
-          hexo clean
-          hexo generate
+          ./node_modules/.bin/hexo clean
+          ./node_modules/.bin/hexo generate
+
+      - name: 记录生成时间
+        run: |
+          GEN_TIME=$(date +%s)
+          echo "Generate duration: $((GEN_TIME - END_TIME)) seconds"
 
       - name: 检查 public 目录
         run: ls -la ./public
@@ -50,4 +64,6 @@ jobs:
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages  # 部署到 gh-pages 分支
+          publish_branch: gh-pages
+          force_orphan: true
+          keep_files: true
