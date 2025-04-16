@@ -3,8 +3,8 @@ abbrlink: ''
 categories: []
 date: '2025-04-16T17:12:57.639054+08:00'
 tags: []
-title: title
-updated: '2025-04-16T17:12:58.413+08:00'
+title: Test
+updated: '2025-04-16T17:17:50.650+08:00'
 ---
 ## This is a simple test for uploading media asset
 
