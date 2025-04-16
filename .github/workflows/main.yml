@@ -50,4 +50,4 @@ jobs:
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./public
-          publish_branch: main  # 或者改为 gh-pages 或者 master 如果需要
+          publish_branch: gh-pages  # 部署到 gh-pages 分支
