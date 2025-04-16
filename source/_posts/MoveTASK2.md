@@ -5,8 +5,8 @@ categories:
 date: '2025-04-16T16:40:21.592642+08:00'
 tags:
 - Web3
-title: 0x2 Let's Move TASK2
-updated: '2025-04-16T16:40:22.471+08:00'
+title: 0x2 Mint & Burn
+updated: '2025-04-16T17:54:00.947+08:00'
 ---
 # 0x2 Let's Move TASK2
 
@@ -134,4 +134,3 @@ module task2::my_coin {
 
 如果将 **TreasuryCap** 存储在一个共享对象（**SharedTreasury**）中，允许任何人调用。
 提供公共入口函数（**public entry fun**），通过共享对象间接访问 **TreasuryCap**，因为共享了所有权，**Call** 就可以了，要求对所有权表示敬畏。
-
