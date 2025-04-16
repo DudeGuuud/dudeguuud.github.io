@@ -6,11 +6,11 @@ date: '2025-04-16T16:40:21.592642+08:00'
 tags:
 - Web3
 title: 0x2 Mint & Burn
-updated: '2025-04-16T17:54:00.947+08:00'
+updated: '2025-04-16T17:55:02.308+08:00'
 ---
-# 0x2 Let's Move TASK2
+# 0x2 Mint & Burn
 
-## Mint & Burn
+## Publish Contract
 
 ```Move
 module task2::my_coin;
