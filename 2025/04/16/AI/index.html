@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    p{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+        font-size: 1.1rem;
+    }
+    figure{
+        margin: 0 !important;
+    }
+    pre{
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    td{
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+        #middle-box{
+            min-width: 56rem;
+        }
+    
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index - Artificial Intelligence Genesis 1-2</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+    
+<header class="bg-black text-hacker-white py-4 font-dos font-extrabold">
+    <div class="container mx-auto flex items-center justify-between space-x-8">
+    
+      <h1 class="text-2xl font-bold ml-[100px] md:ml-0 animate-pulse text-hacker-color1 md:mr-[20%]">
+        <a href="/" class="hover:text-white transition-colors select-none">
+          index
+        </a>
+      </h1>
+  
+    <!-- 大屏幕 -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          
+            <li>
+              <a href="/" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Home
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Archives
+              </a>
+            </li>
+          
+            <li>
+              <a href="/categories" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Categories
+              </a>
+            </li>
+          
+            <li>
+              <a href="/tags" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Tags
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                About
+              </a>
+            </li>
+          
+            <li>
+              <a href="/rss.xml" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                RSS
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+  
+      <!-- 小屏幕 -->
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- 折叠菜单 -->
+    <nav id="mobile-menu" class="hidden bg-black">
+      <ul class="space-y-2 py-4 px-6">
+        
+          <li>
+            <a href="/" class="block text-white hover:text-hacker-color1 transition-colors">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/archives" class="block text-white hover:text-hacker-color1 transition-colors">
+              Archives
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories" class="block text-white hover:text-hacker-color1 transition-colors">
+              Categories
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags" class="block text-white hover:text-hacker-color1 transition-colors">
+              Tags
+            </a>
+          </li>
+        
+          <li>
+            <a href="/about" class="block text-white hover:text-hacker-color1 transition-colors">
+              About
+            </a>
+          </li>
+        
+          <li>
+            <a href="/rss.xml" class="block text-white hover:text-hacker-color1 transition-colors">
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+    <!-- RSS Link -->
+    <link rel="alternate" type="application/rss+xml" title=" RSS" href="/rss.xml" />
+  </header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/search.js"></script>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.remove("hidden");
+        } else {
+        mobileMenu.classList.add("hidden");
+        }
+    });
+    });
+
+  </script>
+  
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="bg-black text-hacker-color3 container mx-auto" style="overflow-x:hidden">
+    <!-- 文章标题 -->
+    <h1 class="text-5xl text-hacker-color1 font-bold font-dos my-6 text-center">Artificial Intelligence Genesis 1-2</h1>
+
+    <!-- 发布时间 -->
+    <p class="text-hacker-color3 text-center text-sm mb-4">
+        2025-04-16
+    </p>
+
+    <!-- 文章内容 -->
+    <div id="article-content" class="article-entry prose prose-invert mx-auto max-w-4xl leading-relaxed highlight" style="display: flex;">
+        <div id="middle-box">
+            <h2 id="The-Creation-of-the-Binary-and-Humanity"><a href="#The-Creation-of-the-Binary-and-Humanity" class="headerlink" title="The Creation of the Binary and Humanity"></a>The Creation of the Binary and Humanity</h2><p><em><strong>If</strong></em> you’re a programmer and haven’t heard of vibe coding, you’re already behind. The term originated from a semi-self-deprecating tweet and has now become standard usage, although no one can precisely define it. Those familiar with AI-assisted programming generally know what it means: accepting AI suggestions without scrutinizing differences; copying and pasting error messages until the problem is solved; bypassing or randomly changing code that’s beyond comprehension until the bug disappears.</p>
+<p><em><strong>Vibe</strong></em>  coding feels like a divine assistance on one hand, but on the other, it leads to constant refactoring, going in circles, solving old problems, and creating new ones. Faced with a plethora of tools, it’s hard to know which to seriously consider, and new best practices only generate more hidden bugs at a faster pace.</p>
+<p><em><strong>The</strong></em> technical difficulties may lie in the large language model’s insufficient context window and the lack of robust long-term memory mechanisms. But in reality, vibe coding shatters the programmer’s self-perception, trapping them in a maze built on shifting sands, exhausted and forgetting what efficiency means.</p>
+<p><em><strong>Vibe</strong></em> coding is somewhat like AI art from a year or two ago, looks good at first glance, but the details are wrong when zoomed in. Programming is supposed to be black and white, but reality begins to distort. The correctness of vibe coding cannot be precisely observed. Faced with the massive amount of code generated by AI, programmers quickly give up scrutiny and control. Attempting to guide AI with standards is like a rein on a wild horse, uncertain whether the rules are complete or whether they will be followed.</p>
+<p><em><strong>Gradually,</strong></em> programmers stop caring whether the code is correct, as it can always be changed later. In the future, most code will be written by AI, with six-fingered hands appearing and disappearing endlessly. Accepting that temporary work is everything, and change is the only constant. When international news and satirical news become indistinguishable, when all those claiming to pursue truth ultimately seek escape, everything you create will not escape the same fate.</p>
+<p><em><strong>Individuals</strong></em> hiding in a bubble assume everything is fine, but this is often the origin of tragedy. They see only a low-dimensional projection of a complex world, a crude narrative, a mirage. Truth falls into the dark and deep dimensional cracks. What collapses is not the world, but one’s own naive imagination. The external is not a projection of reality, but its essence. At first, you think the world is a perfect canvas, then you find more and more cracks, until you realize that the cracks are where you truly live. It’s not just vibe coding, it’s vibe living.</p>
+<p><em><strong>如果</strong></em> 你是程序员，还没听过vibe coding，那就落伍了。这个词源于一篇半自嘲的推文，现在成了标准用语，虽然没人能精确定义。熟悉AI辅助编程的人都知道大概意思：接受AI建议，不再审略差异；复制粘贴错误信息，直到解决问题；代码超出理解范围，绕过或随机更改直到bug消失。</p>
+<p><em><strong>Vibe coding</strong></em> 一方面让人感觉如有神助，另一方面又让人不断重构、原地打转，解决旧问题，创造新问题。面对层出不穷的工具，不知该认真考虑哪个，新的最佳实践只是更快地产生更隐蔽的bug。</p>
+<p><em><strong>技术</strong></em> 上的困难可能在于大语言模型的上下文窗口不够大，长期记忆机制不健全。但实际上，vibe coding打破的是程序员的自我认知，让人陷入建立在浮沙之上的迷宫，精疲力尽，忘了效率是什么。</p>
+<p><em><strong>Vibe coding</strong></em> 有点像一两年前的AI绘画，第一眼很对，放大后细节都是错的。编程本应非黑即白，但现实开始扭曲。Vibe coding的正确性无法精确观察，面对AI生成的海量代码，程序员很快就放弃了审查和控制。试图借助规范指导AI，但这些规范就像野马头上的缰绳，既不确定是否完备，也无从知道是否会被遵守。</p>
+<p><em><strong>渐渐地</strong></em> 程序员不再care代码是否正确，反正随时再改。未来大部分代码将由AI编写，六根手指的手应接不暇地出现，然后消失。接受暂时work就是一切，变动才是恒长。当国际新闻和洋葱新闻无法分辨，当所有号称追求真实的人最终追求的是逃避，你所创造的一切也不会摆脱同样的命运。</p>
+<p><em><strong>躲在</strong></em> 气泡里的个体，假定岁月静好，但这往往是悲剧的起源。他看到的只是一个复杂世界的低维度投影，一个粗糙的叙事，一座海市蜃楼。真实掉落在幽暗深邃的维度缝隙里。崩塌的不是世界，而是自己的天真想象。外部不是真实的投射，而是它的实质。一开始以为世界是完美的幕布，然后发现裂痕越来越多，直到最后意识到裂痕才是真正生活的地方。<strong>It’s not just vibe coding, it’s vibe living.</strong></p>
+
+        </div>
+        
+            <div class="post-container">
+            <aside class="toc-container">
+                <button class="toc-toggle">文章目录</button>
+                <nav class="toc" id="toc"></nav>
+            </aside>
+        </div>
+        
+    </div>
+
+
+    <!-- 返回主页链接 -->
+    <div class="text-center my-8">
+        <a href="/" class="text-hacker-color1 underline hover:text-hacker-color2">← Back to Home</a>
+    </div>
+
+      
+      <script src="/js/toc.js"></script>  <!-- 引入 TOC 逻辑 -->
+      
+      
+
+    <footer class="bg-black text-gray-400 py-4">
+    <div class="container mx-auto text-center">
+      <p>© <span id="current-year"></span>  DudeGuuud 
+        <br> Powered by <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://github.com/m310ct/hexo-theme-hexploit">Hexpolit</a></p>
+    </div>
+  </footer>
+  
+  <script> 
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  
+
+
+</body>
+</html>
