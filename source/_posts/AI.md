@@ -6,7 +6,7 @@ date: '2025-04-16T21:19:06.749403+08:00'
 tags:
 - AI
 title: Artificial Intelligence Genesis 1-2
-updated: '2025-04-17T15:31:55.605+08:00'
+updated: '2025-04-25T21:10:59.022+08:00'
 ---
 ## The Creation of the Binary and Humanity
 
@@ -20,17 +20,4 @@ updated: '2025-04-17T15:31:55.605+08:00'
 
 ***Gradually\,*** programmers stop caring whether the code is correct, as it can always be changed later. In the future, most code will be written by AI, with six-fingered hands appearing and disappearing endlessly. Accepting that temporary work is everything, and change is the only constant. When international news and satirical news become indistinguishable, when all those claiming to pursue truth ultimately seek escape, everything you create will not escape the same fate.
 
-***Individuals*** hiding in a bubble assume everything is fine, but this is often the origin of tragedy. They see only a low-dimensional projection of a complex world, a crude narrative, a mirage. Truth falls into the dark and deep dimensional cracks. What collapses is not the world, but one's own naive imagination. The external is not a projection of reality, but its essence. At first, you think the world is a perfect canvas, then you find more and more cracks, until you realize that the cracks are where you truly live. It's not just vibe coding, it's vibe living.
-
-***如果*** 你是程序员，还没听过vibe coding，那就落伍了。这个词源于一篇半自嘲的推文，现在成了标准用语，虽然没人能精确定义。熟悉AI辅助编程的人都知道大概意思：接受AI建议，不再审略差异；复制粘贴错误信息，直到解决问题；代码超出理解范围，绕过或随机更改直到bug消失。
-
-***Vibe coding*** 一方面让人感觉如有神助，另一方面又让人不断重构、原地打转，解决旧问题，创造新问题。面对层出不穷的工具，不知该认真考虑哪个，新的最佳实践只是更快地产生更隐蔽的bug。
-
-***技术*** 上的困难可能在于大语言模型的上下文窗口不够大，长期记忆机制不健全。但实际上，vibe coding打破的是程序员的自我认知，让人陷入建立在浮沙之上的迷宫，精疲力尽，忘了效率是什么。
-
-***Vibe coding*** 有点像一两年前的AI绘画，第一眼很对，放大后细节都是错的。编程本应非黑即白，但现实开始扭曲。Vibe coding的正确性无法精确观察，面对AI生成的海量代码，程序员很快就放弃了审查和控制。试图借助规范指导AI，但这些规范就像野马头上的缰绳，既不确定是否完备，也无从知道是否会被遵守。
-
-***渐渐地*** 程序员不再care代码是否正确，反正随时再改。未来大部分代码将由AI编写，六根手指的手应接不暇地出现，然后消失。接受暂时work就是一切，变动才是恒长。当国际新闻和洋葱新闻无法分辨，当所有号称追求真实的人最终追求的是逃避，你所创造的一切也不会摆脱同样的命运。
-
-***躲在*** 气泡里的个体，假定岁月静好，但这往往是悲剧的起源。他看到的只是一个复杂世界的低维度投影，一个粗糙的叙事，一座海市蜃楼。真实掉落在幽暗深邃的维度缝隙里。崩塌的不是世界，而是自己的天真想象。外部不是真实的投射，而是它的实质。一开始以为世界是完美的幕布，然后发现裂痕越来越多，直到最后意识到裂痕才是真正生活的地方。**It's not just vibe coding, it's vibe living.**
-
+***Individuals*** hiding in a bubble assume everything is fine, but this is often the origin of tragedy. They see only a low-dimensional projection of a complex world, a crude narrative, a mirage. Truth falls into the dark and deep dimensional cracks. What collapses is not the world, but one's own naive imagination. The external is not a projection of reality, but its essence. At first, you think the world is a perfect canvas, then you find more and more cracks, until you realize that the cracks are where you truly live. **It's not just vibe coding, it's vibe living.**
