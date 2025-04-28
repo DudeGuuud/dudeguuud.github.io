@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    p{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+        font-size: 1.1rem;
+    }
+    figure{
+        margin: 0 !important;
+    }
+    pre{
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    td{
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+        #middle-box{
+            min-width: 56rem;
+        }
+    
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index - How To Define a Referenced Sound?</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+    
+<header class="bg-black text-hacker-white py-4 font-dos font-extrabold">
+    <div class="container mx-auto flex items-center justify-between space-x-8">
+    
+      <h1 class="text-2xl font-bold ml-[100px] md:ml-0 animate-pulse text-hacker-color1 md:mr-[20%]">
+        <a href="/" class="hover:text-white transition-colors select-none">
+          index
+        </a>
+      </h1>
+  
+    <!-- 大屏幕 -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          
+            <li>
+              <a href="/" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Home
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Archives
+              </a>
+            </li>
+          
+            <li>
+              <a href="/categories" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Categories
+              </a>
+            </li>
+          
+            <li>
+              <a href="/tags" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Tags
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                About
+              </a>
+            </li>
+          
+            <li>
+              <a href="/rss.xml" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                RSS
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+  
+      <!-- 小屏幕 -->
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- 折叠菜单 -->
+    <nav id="mobile-menu" class="hidden bg-black">
+      <ul class="space-y-2 py-4 px-6">
+        
+          <li>
+            <a href="/" class="block text-white hover:text-hacker-color1 transition-colors">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/archives" class="block text-white hover:text-hacker-color1 transition-colors">
+              Archives
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories" class="block text-white hover:text-hacker-color1 transition-colors">
+              Categories
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags" class="block text-white hover:text-hacker-color1 transition-colors">
+              Tags
+            </a>
+          </li>
+        
+          <li>
+            <a href="/about" class="block text-white hover:text-hacker-color1 transition-colors">
+              About
+            </a>
+          </li>
+        
+          <li>
+            <a href="/rss.xml" class="block text-white hover:text-hacker-color1 transition-colors">
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+    <!-- RSS Link -->
+    <link rel="alternate" type="application/rss+xml" title=" RSS" href="/rss.xml" />
+  </header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/search.js"></script>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.remove("hidden");
+        } else {
+        mobileMenu.classList.add("hidden");
+        }
+    });
+    });
+
+  </script>
+  
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="bg-black text-hacker-color3 container mx-auto" style="overflow-x:hidden">
+    <!-- 文章标题 -->
+    <h1 class="text-5xl text-hacker-color1 font-bold font-dos my-6 text-center">How To Define a Referenced Sound?</h1>
+
+    <!-- 发布时间 -->
+    <p class="text-hacker-color3 text-center text-sm mb-4">
+        2025-04-28
+    </p>
+
+    <!-- 文章内容 -->
+    <div id="article-content" class="article-entry prose prose-invert mx-auto max-w-4xl leading-relaxed highlight" style="display: flex;">
+        <div id="middle-box">
+            <h2 id="For-The-Beginning"><a href="#For-The-Beginning" class="headerlink" title="For The Beginning"></a>For The Beginning</h2><p>Now i am lying on my bed listening to Blowin’ In The Wind by Bob Dylan with my Sony WF-XM4 which reminds me of my old memories. This one is a wireless headset with low bandwidth and thick low frequency volume. I used to like high frequency monitoring about four years ago. Yes I quit. I stopped chasing high fidelity and choose convenient instead. I’m not quite sure whether it’s financial austerity or just academics. I wanted to note something Deja Vu on my head.</p>
+<h2 id="1-MoonDrop"><a href="#1-MoonDrop" class="headerlink" title="1. MoonDrop"></a>1. MoonDrop</h2><p>In the far long past years I listened to different types of IEM, what makes me feel the must touching is MoonDrop Kxxs, I was depressed in my age of 18. I lost my patience and curiosity in the whole world in a highly pressured environment: My High School. So I listen to a theme ACG from When the Cicadas Cry, It gave me a peaceful Zen for a short summer. That’s also my age I got addicted to Nicotine.</p>
+<p>By chance, I stumbled upon Kxxs review videos on Bilibili, sparking my dive into the world of headphones. The MoonDrop Kxxs, with its sleek silver design and single dynamic driver, came paired with a crystal-clear, silver-plated copper braided cable that silenced the annoying stethoscope effect as I lay in bed, lost in music. That wire stopped me from hearing stethoscope effect noises when I crying in my bed. A standard Harman Curve based training sound effect makes me immersed in the ocean of tunes.</p>
+<p>I started obsessed with ACG and slowly turned to Electronic and Rock genres. I used them to release the pain and suffer inside me. After half a year, I was cured.</p>
+<p>Although it has done well in Mid-frequency vocal part and low-frequency rhythm. But it seems to be more like a luxury symbol in that period of time. Kxxs is no more than a Entry-level headphone. The diaphragm isn’t that professional and “Referenced”. Now , Kxxs is officially announced discontinued. When i look up to the materials, Kato the plus version and KADENZ the final version has replaced it. The curtain of Kxxs has fell. However, it gave me a brief path on the way finding the “Reference Sound”, the Harman Curve.</p>
+<h2 id="2-Harman-Curve"><a href="#2-Harman-Curve" class="headerlink" title="2. Harman Curve"></a>2. Harman Curve</h2><p>Imagine one simple frequency response diagram can quantification the beautiful of music, that is the Harman Curve. Harman researchers find that nearly straight frequency response won’t give a better deduction to the audience. Just like chocolate bars, without corners and lines makes them rigid and tasteless.</p>
+<p>The Harman Curve is dedicating a publicly acceptable frequency response, gain in the low frequency for better liveliness, and improve the high frequency to enhance larger sound field and fidelity, the sound will be not as dry or boring as the record studio do. But now there came up to an problem: “How to convince me that a non-original sound is referenced?”. I can’t. It depends on individually ear preference. Some would think a formulated studio sound is referenced, but some would think a sound that company them through the darkness and asphyxia times. But all i can say is Harman Curve designed a paradigm, less than it can’t be good goods, equals to it would be boring, beyond it brining a different whole new universe.</p>
+<h2 id="3-Dunu-Est-112"><a href="#3-Dunu-Est-112" class="headerlink" title="3. Dunu Est 112"></a>3. Dunu Est 112</h2><p>It was the first time knowing Multi-sound unit design when i browsed headphones forums in my age of 19. I sold my Kxxs with deep cherish and bought Dunu Est 112 on Chinese Ebay. Larger power and resolution requirements didn’t stopped me, i also bought a Low-spec headphone amp which cost me around 40 dollars.</p>
+<p>Dunu Est 112 has four different units : 1 Dynamic Driver, 1 Balanced Armature, 2 Electrostatic Drivers. Without doubt, this headphone brings significant high frequency resolution and shortage in low frequency performance.</p>
+
+        </div>
+        
+            <div class="post-container">
+            <aside class="toc-container">
+                <button class="toc-toggle">文章目录</button>
+                <nav class="toc" id="toc"></nav>
+            </aside>
+        </div>
+        
+    </div>
+
+
+    <!-- 返回主页链接 -->
+    <div class="text-center my-8">
+        <a href="/" class="text-hacker-color1 underline hover:text-hacker-color2">← Back to Home</a>
+    </div>
+
+      
+      <script src="/js/toc.js"></script>  <!-- 引入 TOC 逻辑 -->
+      
+      
+
+    <footer class="bg-black text-gray-400 py-4">
+    <div class="container mx-auto text-center">
+      <p>© <span id="current-year"></span>  DudeGuuud 
+        <br> Powered by <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://github.com/m310ct/hexo-theme-hexploit">Hexpolit</a></p>
+    </div>
+  </footer>
+  
+  <script> 
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  
+
+
+</body>
+</html>
