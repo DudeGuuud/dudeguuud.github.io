@@ -5,7 +5,7 @@ date: '2025-04-28T14:26:47.448054+08:00'
 tags:
 - HIFI
 title: How To Define a Referened Sound?
-updated: '2025-04-28T14:31:04.982+08:00'
+updated: '2025-04-28T14:37:44.553+08:00'
 ---
 ## For The Beginning
 
