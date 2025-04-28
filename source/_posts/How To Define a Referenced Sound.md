@@ -30,4 +30,4 @@ The Harman Curve is dedicating a publicly acceptable frequency response, gain in
 
 It was the first time knowing Multi-sound unit design when i browsed headphones forums in my age of 19. I sold my Kxxs with deep cherish and bought Dunu Est 112 on Chinese Ebay. Larger power and resolution requirements didn't stopped me, i also bought a Low-spec headphone amp which cost me around 40 dollars.
 
-Dunu Est 112 has three different units : 1 Dynamic Driver, 1 Balanced Armature, 2 Electrostatic Drivers. Without doubt, this headphone brings significant high frequency resolution and shortage in low frequency performance.
+Dunu Est 112 has four different units : 1 Dynamic Driver, 1 Balanced Armature, 2 Electrostatic Drivers. Without doubt, this headphone brings significant high frequency resolution and shortage in low frequency performance.
