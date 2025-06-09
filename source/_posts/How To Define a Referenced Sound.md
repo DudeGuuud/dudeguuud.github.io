@@ -4,7 +4,7 @@ categories: []
 date: '2025-04-28T14:42:28.435505+08:00'
 tags: []
 title: How To Define a Referenced Sound?
-updated: '2025-04-28T14:43:12.904+08:00'
+updated: '2025-06-09T14:06:44.373+08:00'
 ---
 ## For The Beginning
 
@@ -30,4 +30,6 @@ The Harman Curve is dedicating a publicly acceptable frequency response, gain in
 
 It was the first time knowing Multi-sound unit design when i browsed headphones forums in my age of 19. I sold my Kxxs with deep cherish and bought Dunu Est 112 on Chinese Ebay. Larger power and resolution requirements didn't stopped me, i also bought a Low-spec headphone amp which cost me around 40 dollars.
 
-Dunu Est 112 has four different units : 1 Dynamic Driver, 1 Balanced Armature, 2 Electrostatic Drivers. Without doubt, this headphone brings significant high frequency resolution and shortage in low frequency performance.
+Dunu Est 112 has four different units : 1 Dynamic Driver, 1 Balanced Armature, 2 Electrostatic Drivers. Without doubt, this headphone brings significant high frequency resolution and shortage in low frequency performance. 
+
+I really love the electrostatic unit in these earphones. I especially enjoy using them to listen to electronic music, like Coldplay’s *Hymn For The Weekend* or Mike Perry/SHY Martin’s *The Ocean (Radio Edit)*. The electrostatic unit handles the highs with a sweet and smooth quality, rarely producing any sibilance. Complemented by the dynamic driver, the rhythm and bass impact of the songs are quite impressive, as the electrostatic sound overshadows them......However, when switching to other genres, the bass lacks depth, and the soundstage feels scattered and incoherent.
