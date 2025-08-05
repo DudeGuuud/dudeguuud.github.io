@@ -1,10 +1,16 @@
 ---
 abbrlink: ''
-categories: []
+categories:
+- - Tec
+- - Web3
+- - CTF
 date: '2025-08-05T16:32:15.725705+08:00'
-tags: []
+tags:
+- Tec
+- Web3
+- CTF
 title: SUI MOVE CTF 2025 (1-4) Write Up
-updated: '2025-08-05T16:32:21.264+08:00'
+updated: '2025-08-05T19:35:54.922+08:00'
 ---
 # Sui Move CTF 2025(1-4) WriteUp
 
@@ -270,6 +276,7 @@ sui client ptb \
 ### 英雄升级数值分析
 
 升级前后战斗力对比：
+
 
 | 属性     | 升级前 | 升级后 | 提升 |
 | -------- | ------ | ------ | ---- |
