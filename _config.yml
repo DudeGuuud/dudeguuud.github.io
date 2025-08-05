@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: index
+title: Dude's Blog
 subtitle: 'A Way of Killing time'
 description: '"the quieter you become, the more you are able to hear"'
 keywords:
@@ -43,19 +43,20 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
+syntax_highlighter: prismjs
 highlight:
-  enable: true
+  auto_detect: false
   line_number: true
-  auto_detect: true
-  tab_replace: '    '
+  line_threshold: 0
+  tab_replace: '  '
+  exclude_languages: []
   wrap: true
   hljs: true
 prismjs:
-  enable: false
   preprocess: true
   line_number: true
-  tab_replace: '    '
+  line_threshold: 0
+  tab_replace: '  '
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -97,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-hexploit
+theme: oranges
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

@@ -12,7 +12,7 @@ updated: '2025-04-16T17:55:02.308+08:00'
 
 ## Publish Contract
 
-```Move
+```rust
 module task2::my_coin;
     use sui::coin::{Self, Coin, TreasuryCap};
     use std::debug;
@@ -63,7 +63,7 @@ module task2::my_coin;
 
 同时如果需要共享TreasuryCap的权限
 
-```
+```rust
 module task2::my_coin {
     use sui::coin::{Self, Coin, TreasuryCap};
     use sui::transfer;
@@ -129,7 +129,13 @@ module task2::my_coin {
     // 公共销毁函数：任何人可调用
     public entry fun burn(
         shared: &mut SharedTreasury,
-        coin: Coin<
+        coin: Coin<MY_COIN>
+    ) {
+        let amount = coin::value(&coin);
+        coin::burn(&mut shared.treasury, coin);
+        event::emit(BurnEvent { amount });
+    }
+}
 ```
 
 如果将 **TreasuryCap** 存储在一个共享对象（**SharedTreasury**）中，允许任何人调用。
