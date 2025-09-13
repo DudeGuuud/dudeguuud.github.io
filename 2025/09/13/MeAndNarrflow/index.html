@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="DudeGuuud" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  <meta name="description" content="&#34;the quieter you become, the more you are able to hear&#34;" />
+  
+  
+  
+  <title>
+    
+      NarrFlow: A Journey Toward True Blockchain Decentralization 
+      
+      
+      |
+    
+     Dude&#39;s Blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/rss.xml" title="Dude's Blog" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">DudeGuuud</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">NarrFlow: A Journey Toward True Blockchain Decentralization</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2025-09-13 14:25:58
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/Web3/" title="Web3">
+                    <b>#</b> Web3
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Web3/" title="Web3">
+                    #Web3
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>For a long time, blockchain technology has been primarily driven by capital speculation, with fewer people focusing on creating genuine entertainment experiences rather than monetary betting mechanisms. NarrFlow represents an attempt to break this pattern. If you observe the current blockchain gaming landscape, you’ll find that most projects are essentially sophisticated gambling platforms disguised as games. This artificial stimulation of reward mechanisms, while profitable, doesn’t contribute to healthy digital entertainment ecosystems.</p>
+<h2 id="An-Introduction-to-NarrFlow"><a href="#An-Introduction-to-NarrFlow" class="headerlink" title="An Introduction to NarrFlow"></a>An Introduction to NarrFlow</h2><p>I explored a more accessible and traditional approach to blockchain-based collaborative storytelling. Imagine a platform where users can collectively determine the direction of narratives while maintaining democratic control over both content and governance mechanisms.</p>
+<p>NarrFlow is a novel-based collaboration platform where users work together to create stories through consensus-driven voting. The platform eliminates gambling mechanics entirely—participants pay only minimal gas fees to contribute with equal opportunity. This represents a step toward genuine decentralization in blockchain entertainment.</p>
+<h2 id="Current-Technical-Implementation-and-Limitations"><a href="#Current-Technical-Implementation-and-Limitations" class="headerlink" title="Current Technical Implementation and Limitations"></a>Current Technical Implementation and Limitations</h2><h3 id="Architecture-Overview"><a href="#Architecture-Overview" class="headerlink" title="Architecture Overview"></a>Architecture Overview</h3><p>The current NarrFlow implementation adopts a hybrid approach that balances user experience with decentralization principles, though with notable compromises:</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// Current Architecture Flow</span>
+<span class="token function">Frontend</span> <span class="token punctuation">(</span>React<span class="token punctuation">)</span> → Backend <span class="token constant">API</span> <span class="token punctuation">(</span>Node<span class="token punctuation">.</span>js<span class="token operator">/</span>Express<span class="token punctuation">)</span> → <span class="token function">Database</span> <span class="token punctuation">(</span>Supabase<span class="token punctuation">)</span> → Smart <span class="token function">Contract</span> <span class="token punctuation">(</span>Sui<span class="token punctuation">)</span>
+
+<span class="token comment">// Voting Process</span>
+<span class="token number">1.</span> User submits proposal → Stored <span class="token keyword">in</span> Supabase
+<span class="token number">2.</span> Users cast votes → Recorded <span class="token keyword">in</span> database  
+<span class="token number">3.</span> Cron job monitors countdown → Server<span class="token operator">-</span>side timer
+<span class="token number">4.</span> Admin wallet executes → Writes winner to blockchain<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Critical-Centralization-Issues"><a href="#Critical-Centralization-Issues" class="headerlink" title="Critical Centralization Issues"></a>Critical Centralization Issues</h3><p><strong>1. Voting Transparency Problem</strong></p>
+<ul>
+<li>All voting data resides in Supabase database</li>
+<li>Users cannot independently verify vote integrity</li>
+<li>Vote counting occurs on centralized servers</li>
+</ul>
+<p><strong>2. Single Point of Failure</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// Problematic dependency on server availability</span>
+<span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token function">checkExpiredVotingSessions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">executeWinningProposal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">30000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Server crash = system halt</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>3. Trust Requirements</strong></p>
+<ul>
+<li>Backend holds admin private keys</li>
+<li>Users must trust server operators</li>
+<li>No cryptographic proof of fair voting</li>
+</ul>
+<h3 id="Why-These-Limitations-Exist"><a href="#Why-These-Limitations-Exist" class="headerlink" title="Why These Limitations Exist"></a>Why These Limitations Exist</h3><p>The centralized components weren’t implemented due to Layer1 blockchain limitations, but rather to optimize for:</p>
+<ul>
+<li>​<strong>Gas cost reduction</strong>​: Avoiding per-vote transaction fees</li>
+<li>​<strong>User experience</strong>​: Instant feedback without blockchain confirmation delays</li>
+<li>​<strong>Development simplicity</strong>​: Traditional web architecture patterns</li>
+</ul>
+<p>However, modern Layer1 solutions like Sui offer capabilities that make full decentralization feasible without sacrificing usability.</p>
+<h2 id="Technical-Deep-Dive-Blockchain-Fundamentals"><a href="#Technical-Deep-Dive-Blockchain-Fundamentals" class="headerlink" title="Technical Deep Dive: Blockchain Fundamentals"></a>Technical Deep Dive: Blockchain Fundamentals</h2><h3 id="Understanding-Layer1-Capabilities"><a href="#Understanding-Layer1-Capabilities" class="headerlink" title="Understanding Layer1 Capabilities"></a>Understanding Layer1 Capabilities</h3><p><strong>Transaction Throughput Evolution:</strong></p>
+<ul>
+<li>Bitcoin: ~7 TPS (Transactions Per Second)</li>
+<li>Ethereum: ~15 TPS</li>
+<li><strong>Modern Layer1s:</strong><ul>
+<li>Sui: 297,000 TPS theoretical, 65,000+ practical</li>
+<li>Solana: 65,000 TPS</li>
+<li>Avalanche: 4,500+ TPS</li>
+</ul>
+</li>
+</ul>
+<p><strong>Smart Contract Limitations vs Reality:</strong></p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token comment">// Move language on Sui supports complex logic</span>
+public entry fun <span class="token function">complex_voting_logic</span><span class="token punctuation">(</span>
+    session<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">VotingSession</span><span class="token punctuation">,</span>
+    proposals<span class="token punctuation">:</span> vector<span class="token operator">&lt;</span><span class="token class-name">Proposal</span><span class="token operator">></span><span class="token punctuation">,</span>
+    voter_weights<span class="token punctuation">:</span> <span class="token class-name">Table</span><span class="token operator">&lt;</span>address<span class="token punctuation">,</span> <span class="token keyword">u64</span><span class="token operator">></span>
+<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Modern contracts can handle sophisticated operations</span>
+    <span class="token comment">// including real-time calculations, dynamic rewards,</span>
+    <span class="token comment">// and multi-step consensus mechanisms</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Consensus-Mechanisms-and-Voting"><a href="#Consensus-Mechanisms-and-Voting" class="headerlink" title="Consensus Mechanisms and Voting"></a>Consensus Mechanisms and Voting</h3><p><strong>Byzantine Fault Tolerance in Practice:</strong></p>
+<pre class="line-numbers language-pseudocode" data-language="pseudocode"><code class="language-pseudocode">&#x2F;&#x2F; Blockchain consensus ensures voting integrity
+CONSENSUS_PROTOCOL:
+    FOR each voting transaction:
+        1. Cryptographic signature verification
+        2. Double-voting prevention  
+        3. Immutable vote recording
+        4. Distributed validation across nodes
+        
+    RESULT: Mathematically provable vote integrity<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Gas Economics:</strong></p>
+<ul>
+<li>Sui’s gas model: Object-based pricing, not computation-based</li>
+<li>Batch operations can reduce costs significantly</li>
+<li>Sponsored transactions possible for user onboarding</li>
+</ul>
+<h2 id="Proposed-Decentralization-Improvements"><a href="#Proposed-Decentralization-Improvements" class="headerlink" title="Proposed Decentralization Improvements"></a>Proposed Decentralization Improvements</h2><h3 id="1-On-Chain-Voting-System"><a href="#1-On-Chain-Voting-System" class="headerlink" title="1. On-Chain Voting System"></a>1. On-Chain Voting System</h3><p><strong>Current vs Improved:</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// Current: Centralized voting</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">vote</span><span class="token punctuation">(</span><span class="token parameter">proposalId<span class="token punctuation">,</span> userId</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">await</span> database<span class="token punctuation">.</span>votes<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">proposal_id</span><span class="token operator">:</span> proposalId<span class="token punctuation">,</span>
+        <span class="token literal-property property">user_id</span><span class="token operator">:</span> userId<span class="token punctuation">,</span>
+        <span class="token literal-property property">timestamp</span><span class="token operator">:</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// Improved: Blockchain voting</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">vote</span><span class="token punctuation">(</span><span class="token parameter">sessionId<span class="token punctuation">,</span> proposalIndex</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> tx <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TransactionBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tx<span class="token punctuation">.</span><span class="token function">moveCall</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token constant">PACKAGE_ID</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">::voting::cast_vote</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">arguments</span><span class="token operator">:</span> <span class="token punctuation">[</span>tx<span class="token punctuation">.</span><span class="token function">object</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">)</span><span class="token punctuation">,</span> tx<span class="token punctuation">.</span><span class="token function">pure</span><span class="token punctuation">(</span>proposalIndex<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token function">signAndExecuteTransaction</span><span class="token punctuation">(</span>tx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Smart Contract Implementation:</strong></p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token comment">// Complete voting session structure</span>
+public <span class="token keyword">struct</span> <span class="token type-definition class-name">VotingSession</span> has key<span class="token punctuation">,</span> store <span class="token punctuation">&#123;</span>
+    id<span class="token punctuation">:</span> <span class="token constant">UID</span><span class="token punctuation">,</span>
+    proposals<span class="token punctuation">:</span> vector<span class="token operator">&lt;</span><span class="token class-name">Proposal</span><span class="token operator">></span><span class="token punctuation">,</span>
+    votes<span class="token punctuation">:</span> <span class="token class-name">Table</span><span class="token operator">&lt;</span>address<span class="token punctuation">,</span> <span class="token keyword">u64</span><span class="token operator">></span><span class="token punctuation">,</span>        <span class="token comment">// voter -> proposal_index</span>
+    end_timestamp<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>
+    min_votes_required<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>
+    status<span class="token punctuation">:</span> <span class="token keyword">u8</span><span class="token punctuation">,</span>                        <span class="token comment">// 0=active, 1=completed, 2=failed</span>
+<span class="token punctuation">&#125;</span>
+
+public entry fun <span class="token function">cast_vote</span><span class="token punctuation">(</span>
+    session<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">VotingSession</span><span class="token punctuation">,</span>
+    proposal_index<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>
+    ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">TxContext</span>
+<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> voter <span class="token operator">=</span> <span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">sender</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> current_time <span class="token operator">=</span> <span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">epoch_timestamp_ms</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Validation</span>
+    <span class="token macro property">assert!</span><span class="token punctuation">(</span>current_time <span class="token operator">&lt;</span> session<span class="token punctuation">.</span>end_timestamp<span class="token punctuation">,</span> <span class="token constant">E_VOTING_ENDED</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property">assert!</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token namespace">table<span class="token punctuation">::</span></span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>session<span class="token punctuation">.</span>votes<span class="token punctuation">,</span> voter<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">E_ALREADY_VOTED</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Record vote</span>
+    <span class="token namespace">table<span class="token punctuation">::</span></span><span class="token function">add</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">mut</span> session<span class="token punctuation">.</span>votes<span class="token punctuation">,</span> voter<span class="token punctuation">,</span> proposal_index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Update proposal vote count</span>
+    <span class="token keyword">let</span> proposal <span class="token operator">=</span> <span class="token namespace">vector<span class="token punctuation">::</span></span><span class="token function">borrow_mut</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">mut</span> session<span class="token punctuation">.</span>proposals<span class="token punctuation">,</span> proposal_index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    proposal<span class="token punctuation">.</span>vote_count <span class="token operator">=</span> proposal<span class="token punctuation">.</span>vote_count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Emit event for real-time updates</span>
+    <span class="token namespace">event<span class="token punctuation">::</span></span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token class-name">VoteEvent</span> <span class="token punctuation">&#123;</span>
+        session_id<span class="token punctuation">:</span> <span class="token namespace">object<span class="token punctuation">::</span></span><span class="token function">id</span><span class="token punctuation">(</span>session<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        voter<span class="token punctuation">,</span>
+        proposal_index<span class="token punctuation">,</span>
+        timestamp<span class="token punctuation">:</span> current_time
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-Decentralized-Timer-Mechanism"><a href="#2-Decentralized-Timer-Mechanism" class="headerlink" title="2. Decentralized Timer Mechanism"></a>2. Decentralized Timer Mechanism</h3><p><strong>Problem with Cron Jobs:</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// Centralized timing - single point of failure</span>
+cron<span class="token punctuation">.</span><span class="token function">schedule</span><span class="token punctuation">(</span><span class="token string">'*/30 * * * * *'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token function">checkExpiredSessions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// What if server crashes?</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Blockchain-Native Solution:</strong></p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token comment">// Anyone can trigger session finalization</span>
+public entry fun <span class="token function">finalize_session</span><span class="token punctuation">(</span>
+    session<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">VotingSession</span><span class="token punctuation">,</span>
+    story<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">Story</span><span class="token punctuation">,</span>
+    ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">TxContext</span>
+<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> current_time <span class="token operator">=</span> <span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">epoch_timestamp_ms</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Time-based validation</span>
+    <span class="token macro property">assert!</span><span class="token punctuation">(</span>current_time <span class="token operator">>=</span> session<span class="token punctuation">.</span>end_timestamp<span class="token punctuation">,</span> <span class="token constant">E_NOT_EXPIRED</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property">assert!</span><span class="token punctuation">(</span>session<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">E_ALREADY_FINALIZED</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">let</span> <span class="token punctuation">(</span>winner_exists<span class="token punctuation">,</span> winner_index<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">find_winning_proposal</span><span class="token punctuation">(</span>session<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>winner_exists <span class="token operator">&amp;&amp;</span> <span class="token function">meets_minimum_threshold</span><span class="token punctuation">(</span>session<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Execute winning proposal</span>
+        <span class="token keyword">let</span> winner <span class="token operator">=</span> <span class="token namespace">vector<span class="token punctuation">::</span></span><span class="token function">borrow</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>session<span class="token punctuation">.</span>proposals<span class="token punctuation">,</span> winner_index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">execute_story_update</span><span class="token punctuation">(</span>story<span class="token punctuation">,</span> winner<span class="token punctuation">,</span> ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// Reward distribution</span>
+        <span class="token function">distribute_rewards</span><span class="token punctuation">(</span>session<span class="token punctuation">,</span> winner_index<span class="token punctuation">,</span> ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        session<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// Create next voting round</span>
+        <span class="token function">create_next_session</span><span class="token punctuation">(</span><span class="token function">determine_next_type</span><span class="token punctuation">(</span>story<span class="token punctuation">)</span><span class="token punctuation">,</span> ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Restart voting if insufficient participation</span>
+        session<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token function">create_retry_session</span><span class="token punctuation">(</span>session<span class="token punctuation">.</span>session_type<span class="token punctuation">,</span> ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// Incentivize timely finalization</span>
+fun <span class="token function">distribute_rewards</span><span class="token punctuation">(</span>session<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">VotingSession</span><span class="token punctuation">,</span> winner_index<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span> ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">TxContext</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> total_pool <span class="token operator">=</span> <span class="token function">calculate_reward_pool</span><span class="token punctuation">(</span>session<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> finalizer <span class="token operator">=</span> <span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">sender</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 70% to content winner</span>
+    <span class="token comment">// 20% split among voters  </span>
+    <span class="token comment">// 10% to finalizer (whoever calls this function)</span>
+    <span class="token function">reward_participants</span><span class="token punctuation">(</span>session<span class="token punctuation">,</span> winner_index<span class="token punctuation">,</span> finalizer<span class="token punctuation">,</span> total_pool<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-Event-Driven-Real-Time-Updates"><a href="#3-Event-Driven-Real-Time-Updates" class="headerlink" title="3. Event-Driven Real-Time Updates"></a>3. Event-Driven Real-Time Updates</h3><p><strong>Replace Database Polling with Blockchain Events:</strong></p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// Frontend event subscription</span>
+<span class="token keyword">class</span> <span class="token class-name">BlockchainVotingService</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">async</span> <span class="token function">subscribeToVotingUpdates</span><span class="token punctuation">(</span>sessionId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">await</span> suiClient<span class="token punctuation">.</span><span class="token function">subscribeEvent</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+            filter<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+                MoveEventType<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token constant">PACKAGE_ID</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">::voting::VoteEvent</span><span class="token template-punctuation string">`</span></span>
+            <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token function-variable function">onMessage</span><span class="token operator">:</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>parsedJson<span class="token punctuation">.</span>session_id <span class="token operator">===</span> sessionId<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateVotingUI</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>parsedJson<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    
+    <span class="token comment">// Real-time vote counting from blockchain state</span>
+    <span class="token keyword">async</span> <span class="token function">getCurrentVotes</span><span class="token punctuation">(</span>sessionId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">const</span> session <span class="token operator">=</span> <span class="token keyword">await</span> suiClient<span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+            id<span class="token operator">:</span> sessionId<span class="token punctuation">,</span>
+            options<span class="token operator">:</span> <span class="token punctuation">&#123;</span> showContent<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">parseVotingResults</span><span class="token punctuation">(</span>session<span class="token punctuation">.</span>data<span class="token punctuation">.</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-Advanced-Consensus-Mechanisms"><a href="#4-Advanced-Consensus-Mechanisms" class="headerlink" title="4. Advanced Consensus Mechanisms"></a>4. Advanced Consensus Mechanisms</h3><p><strong>Weighted Voting Implementation:</strong></p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">public <span class="token keyword">struct</span> <span class="token type-definition class-name">VoterProfile</span> has key<span class="token punctuation">,</span> store <span class="token punctuation">&#123;</span>
+    id<span class="token punctuation">:</span> <span class="token constant">UID</span><span class="token punctuation">,</span>
+    contributions<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>        <span class="token comment">// Past story contributions</span>
+    reputation_score<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>     <span class="token comment">// Community-determined reputation  </span>
+    voting_power<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>         <span class="token comment">// Calculated voting weight</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// Calculate dynamic voting weights</span>
+fun <span class="token function">calculate_voting_power</span><span class="token punctuation">(</span>profile<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">VoterProfile</span><span class="token punctuation">,</span> session<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">VotingSession</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">u64</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> base_power <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> contribution_bonus <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>profile<span class="token punctuation">.</span>contributions <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> reputation_bonus <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>profile<span class="token punctuation">.</span>reputation_score <span class="token operator">*</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    base_power <span class="token operator">+</span> contribution_bonus <span class="token operator">+</span> reputation_bonus
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// Quadratic voting to prevent vote buying</span>
+fun <span class="token function">apply_quadratic_voting</span><span class="token punctuation">(</span>raw_votes<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">u64</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Cost increases quadratically: 1 vote = 1 token, 2 votes = 4 tokens, etc.</span>
+    <span class="token keyword">let</span> cost <span class="token operator">=</span> raw_votes <span class="token operator">*</span> raw_votes<span class="token punctuation">;</span>
+    cost
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Sybil Resistance Mechanisms:</strong></p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token comment">// Proof of contribution requirement</span>
+public entry fun <span class="token function">register_voter</span><span class="token punctuation">(</span>
+    registry<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">VoterRegistry</span><span class="token punctuation">,</span>
+    proof_of_contribution<span class="token punctuation">:</span> vector<span class="token operator">&lt;</span><span class="token keyword">u8</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token comment">// IPFS hash of past contributions</span>
+    ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">TxContext</span>
+<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> voter <span class="token operator">=</span> <span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">sender</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Verify minimum contribution threshold</span>
+    <span class="token macro property">assert!</span><span class="token punctuation">(</span><span class="token function">verify_contribution_proof</span><span class="token punctuation">(</span>proof_of_contribution<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">E_INSUFFICIENT_CONTRIBUTION</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Stake requirement to prevent spam</span>
+    <span class="token keyword">let</span> stake <span class="token operator">=</span> <span class="token namespace">coin<span class="token punctuation">::</span></span><span class="token function">split</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">mut</span> payment<span class="token punctuation">,</span> <span class="token constant">MINIMUM_STAKE</span><span class="token punctuation">,</span> ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token function">create_voter_profile</span><span class="token punctuation">(</span>registry<span class="token punctuation">,</span> voter<span class="token punctuation">,</span> stake<span class="token punctuation">,</span> proof_of_contribution<span class="token punctuation">,</span> ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Content-Storage-and-Verification"><a href="#Content-Storage-and-Verification" class="headerlink" title="Content Storage and Verification"></a>Content Storage and Verification</h2><h3 id="Decentralized-Content-Management"><a href="#Decentralized-Content-Management" class="headerlink" title="Decentralized Content Management"></a>Decentralized Content Management</h3><p><strong>IPFS Integration:</strong></p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// Store large content off-chain, hash on-chain</span>
+<span class="token keyword">class</span> <span class="token class-name">ContentManager</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">async</span> <span class="token function">storeProposal</span><span class="token punctuation">(</span>content<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Upload to IPFS</span>
+        <span class="token keyword">const</span> ipfsHash <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ipfs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// Verify content integrity</span>
+        <span class="token keyword">const</span> retrieved <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ipfs<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>ipfsHash<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">assert</span><span class="token punctuation">(</span>retrieved <span class="token operator">===</span> content<span class="token punctuation">,</span> <span class="token string">"Content integrity check failed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">return</span> ipfsHash<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    
+    <span class="token keyword">async</span> <span class="token function">submitProposal</span><span class="token punctuation">(</span>content<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> sessionId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">const</span> contentHash <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">storeProposal</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> preview <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// First 200 chars on-chain</span>
+        
+        <span class="token keyword">const</span> tx <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TransactionBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        tx<span class="token punctuation">.</span><span class="token function">moveCall</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+            target<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token constant">PACKAGE_ID</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">::voting::submit_proposal</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+            arguments<span class="token operator">:</span> <span class="token punctuation">[</span>
+                tx<span class="token punctuation">.</span><span class="token function">object</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                tx<span class="token punctuation">.</span><span class="token function">pure</span><span class="token punctuation">(</span>contentHash<span class="token punctuation">)</span><span class="token punctuation">,</span>    <span class="token comment">// IPFS hash</span>
+                tx<span class="token punctuation">.</span><span class="token function">pure</span><span class="token punctuation">(</span>preview<span class="token punctuation">)</span><span class="token punctuation">,</span>        <span class="token comment">// Preview text</span>
+                tx<span class="token punctuation">.</span><span class="token function">pure</span><span class="token punctuation">(</span>content<span class="token punctuation">.</span>length<span class="token punctuation">)</span>  <span class="token comment">// Content length for verification</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">signAndExecute</span><span class="token punctuation">(</span>tx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Content Verification:</strong></p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">public <span class="token keyword">struct</span> <span class="token type-definition class-name">Proposal</span> has store<span class="token punctuation">,</span> drop <span class="token punctuation">&#123;</span>
+    content_hash<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">,</span>      <span class="token comment">// IPFS hash</span>
+    content_preview<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">,</span>   <span class="token comment">// First 200 characters</span>
+    content_length<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>       <span class="token comment">// Original length for verification</span>
+    author<span class="token punctuation">:</span> address<span class="token punctuation">,</span>
+    vote_count<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>
+    quality_score<span class="token punctuation">:</span> <span class="token keyword">u64</span><span class="token punctuation">,</span>        <span class="token comment">// Community-assessed quality</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// Verify content integrity when retrieved</span>
+public fun <span class="token function">verify_content_integrity</span><span class="token punctuation">(</span>
+    proposal<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">Proposal</span><span class="token punctuation">,</span>
+    full_content<span class="token punctuation">:</span> <span class="token class-name">String</span>
+<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">bool</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Verify length</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token namespace">string<span class="token punctuation">::</span></span><span class="token function">length</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>full_content<span class="token punctuation">)</span> <span class="token operator">!=</span> proposal<span class="token punctuation">.</span>content_length<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Verify preview matches</span>
+    <span class="token keyword">let</span> preview <span class="token operator">=</span> <span class="token namespace">string<span class="token punctuation">::</span></span><span class="token function">sub_string</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>full_content<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>preview <span class="token operator">!=</span> proposal<span class="token punctuation">.</span>content_preview<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Hash verification (simplified)</span>
+    <span class="token keyword">let</span> computed_hash <span class="token operator">=</span> <span class="token function">compute_content_hash</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>full_content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    computed_hash <span class="token operator">==</span> proposal<span class="token punctuation">.</span>content_hash
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Economic-Model-and-Tokenomics"><a href="#Economic-Model-and-Tokenomics" class="headerlink" title="Economic Model and Tokenomics"></a>Economic Model and Tokenomics</h2><h3 id="Multi-Layered-Incentive-System"><a href="#Multi-Layered-Incentive-System" class="headerlink" title="Multi-Layered Incentive System"></a>Multi-Layered Incentive System</h3><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token comment">// Dynamic reward calculation</span>
+public fun <span class="token function">calculate_rewards</span><span class="token punctuation">(</span>
+    session<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">VotingSession</span><span class="token punctuation">,</span>
+    winner_index<span class="token punctuation">:</span> <span class="token keyword">u64</span>
+<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">u64</span><span class="token punctuation">,</span> <span class="token keyword">u64</span><span class="token punctuation">,</span> <span class="token keyword">u64</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// (winner_reward, voter_rewards, finalizer_reward)</span>
+    
+    <span class="token keyword">let</span> base_pool <span class="token operator">=</span> <span class="token constant">BASE_REWARD_PER_SESSION</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> participation_bonus <span class="token operator">=</span> session<span class="token punctuation">.</span>total_votes <span class="token operator">*</span> <span class="token constant">PARTICIPATION_MULTIPLIER</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> quality_bonus <span class="token operator">=</span> <span class="token function">calculate_quality_bonus</span><span class="token punctuation">(</span>session<span class="token punctuation">,</span> winner_index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">let</span> total_pool <span class="token operator">=</span> base_pool <span class="token operator">+</span> participation_bonus <span class="token operator">+</span> quality_bonus<span class="token punctuation">;</span>
+    
+    <span class="token comment">// Distribution: 60% winner, 30% voters, 10% finalizer</span>
+    <span class="token keyword">let</span> winner_reward <span class="token operator">=</span> total_pool <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> voter_pool <span class="token operator">=</span> total_pool <span class="token operator">*</span> <span class="token number">30</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> finalizer_reward <span class="token operator">=</span> total_pool <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    
+    <span class="token punctuation">(</span>winner_reward<span class="token punctuation">,</span> voter_pool<span class="token punctuation">,</span> finalizer_reward<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// Reputation-based rewards</span>
+public fun <span class="token function">update_reputation</span><span class="token punctuation">(</span>
+    profile<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">VoterProfile</span><span class="token punctuation">,</span>
+    action_type<span class="token punctuation">:</span> <span class="token keyword">u8</span><span class="token punctuation">,</span> <span class="token comment">// 0=proposal_won, 1=good_vote, 2=participation</span>
+    impact_score<span class="token punctuation">:</span> <span class="token keyword">u64</span>
+<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">match</span> action_type <span class="token punctuation">&#123;</span>
+        <span class="token number">0</span> <span class="token operator">=></span> profile<span class="token punctuation">.</span>reputation_score <span class="token operator">+=</span> impact_score <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token comment">// Winning proposals</span>
+        <span class="token number">1</span> <span class="token operator">=></span> profile<span class="token punctuation">.</span>reputation_score <span class="token operator">+=</span> impact_score<span class="token punctuation">,</span>     <span class="token comment">// Voting for winners</span>
+        <span class="token number">2</span> <span class="token operator">=></span> profile<span class="token punctuation">.</span>reputation_score <span class="token operator">+=</span> impact_score <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">// Participation</span>
+        _ <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Gas-Optimization-Strategies"><a href="#Gas-Optimization-Strategies" class="headerlink" title="Gas Optimization Strategies"></a>Gas Optimization Strategies</h2><h3 id="Batch-Operations-and-State-Compression"><a href="#Batch-Operations-and-State-Compression" class="headerlink" title="Batch Operations and State Compression"></a>Batch Operations and State Compression</h3><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token comment">// Batch multiple votes in single transaction</span>
+public entry fun <span class="token function">batch_vote</span><span class="token punctuation">(</span>
+    sessions<span class="token punctuation">:</span> vector<span class="token operator">&lt;</span><span class="token constant">ID</span><span class="token operator">></span><span class="token punctuation">,</span>
+    proposals<span class="token punctuation">:</span> vector<span class="token operator">&lt;</span><span class="token keyword">u64</span><span class="token operator">></span><span class="token punctuation">,</span>
+    ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">TxContext</span>
+<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> voter <span class="token operator">=</span> <span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">sender</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token namespace">vector<span class="token punctuation">::</span></span><span class="token function">length</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>sessions<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> session_id <span class="token operator">=</span> <span class="token operator">*</span><span class="token namespace">vector<span class="token punctuation">::</span></span><span class="token function">borrow</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>sessions<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> proposal_index <span class="token operator">=</span> <span class="token operator">*</span><span class="token namespace">vector<span class="token punctuation">::</span></span><span class="token function">borrow</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>proposals<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// Internal vote logic without separate transaction</span>
+        <span class="token function">execute_vote_internal</span><span class="token punctuation">(</span>session_id<span class="token punctuation">,</span> proposal_index<span class="token punctuation">,</span> voter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Single event emission for all votes</span>
+    <span class="token namespace">event<span class="token punctuation">::</span></span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token class-name">BatchVoteEvent</span> <span class="token punctuation">&#123;</span>
+        voter<span class="token punctuation">,</span>
+        sessions<span class="token punctuation">,</span>
+        proposals<span class="token punctuation">,</span>
+        timestamp<span class="token punctuation">:</span> <span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">epoch_timestamp_ms</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// State compression for historical data</span>
+public <span class="token keyword">struct</span> <span class="token type-definition class-name">CompressedVotingHistory</span> has key<span class="token punctuation">,</span> store <span class="token punctuation">&#123;</span>
+    id<span class="token punctuation">:</span> <span class="token constant">UID</span><span class="token punctuation">,</span>
+    session_summaries<span class="token punctuation">:</span> vector<span class="token operator">&lt;</span><span class="token class-name">SessionSummary</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token comment">// Compressed results only</span>
+    merkle_root<span class="token punctuation">:</span> vector<span class="token operator">&lt;</span><span class="token keyword">u8</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token comment">// For detailed history verification</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Migration-Strategy"><a href="#Migration-Strategy" class="headerlink" title="Migration Strategy"></a>Migration Strategy</h2><h3 id="Phased-Decentralization-Approach"><a href="#Phased-Decentralization-Approach" class="headerlink" title="Phased Decentralization Approach"></a>Phased Decentralization Approach</h3><p><strong>Phase 1: Hybrid Validation</strong></p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// Run both systems in parallel</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">hybridVote</span><span class="token punctuation">(</span>sessionId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> proposalIndex<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Legacy system for immediate feedback</span>
+    <span class="token keyword">const</span> dbResult <span class="token operator">=</span> <span class="token keyword">await</span> database<span class="token punctuation">.</span><span class="token function">recordVote</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">,</span> proposalIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Blockchain system for final authority</span>
+    <span class="token keyword">const</span> blockchainTx <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">blockchainVote</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">,</span> proposalIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Validate consistency</span>
+    <span class="token keyword">await</span> <span class="token function">validateVoteConsistency</span><span class="token punctuation">(</span>dbResult<span class="token punctuation">,</span> blockchainTx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Phase 2: Gradual Migration</strong></p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// Feature flags for progressive rollout</span>
+<span class="token keyword">const</span> useBlockchainVoting <span class="token operator">=</span> <span class="token keyword">await</span> featureFlags<span class="token punctuation">.</span><span class="token function">isEnabled</span><span class="token punctuation">(</span><span class="token string">'blockchain_voting'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> useBlockchainTimer <span class="token operator">=</span> <span class="token keyword">await</span> featureFlags<span class="token punctuation">.</span><span class="token function">isEnabled</span><span class="token punctuation">(</span><span class="token string">'blockchain_timer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>useBlockchainVoting<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">await</span> blockchainVotingService<span class="token punctuation">.</span><span class="token function">vote</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">,</span> proposalIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">await</span> legacyVotingService<span class="token punctuation">.</span><span class="token function">vote</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">,</span> proposalIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Phase 3: Full Decentralization</strong></p>
+<ul>
+<li>Remove all centralized components</li>
+<li>Archive historical data to IPFS</li>
+<li>Transition to pure blockchain governance</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>The current NarrFlow implementation demonstrates a pragmatic approach to blockchain application development, balancing user experience with decentralization principles. However, the analysis reveals that the centralized components exist not due to fundamental blockchain limitations, but rather as architectural choices prioritizing development speed and familiar patterns.</p>
+<p>Modern Layer1 blockchains possess the technical capabilities to support fully decentralized collaborative storytelling platforms. The proposed improvements would eliminate single points of failure, enhance transparency, and create a truly trustless creative environment while maintaining excellent user experience.</p>
+<p>The path forward involves a measured migration strategy that gradually shifts critical functionality to blockchain-native implementations, ultimately achieving the platform’s stated goal of genuine decentralization in blockchain entertainment.</p>
+<p>This evolution represents more than just technical improvement—it embodies the philosophical shift from treating blockchain as a speculative instrument to leveraging it as a foundation for transparent, democratic digital communities.</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2025/08/05/MOVE%20CTF%202025%20(5-6)/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2025-09-13 14:25:58
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/Web3/" title="Web3">
+                        <b>#</b> Web3
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Web3/" title="Web3">
+                        #Web3
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#An-Introduction-to-NarrFlow"><span class="toc-text">An Introduction to NarrFlow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Current-Technical-Implementation-and-Limitations"><span class="toc-text">Current Technical Implementation and Limitations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Architecture-Overview"><span class="toc-text">Architecture Overview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Critical-Centralization-Issues"><span class="toc-text">Critical Centralization Issues</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-These-Limitations-Exist"><span class="toc-text">Why These Limitations Exist</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Technical-Deep-Dive-Blockchain-Fundamentals"><span class="toc-text">Technical Deep Dive: Blockchain Fundamentals</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Understanding-Layer1-Capabilities"><span class="toc-text">Understanding Layer1 Capabilities</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Consensus-Mechanisms-and-Voting"><span class="toc-text">Consensus Mechanisms and Voting</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proposed-Decentralization-Improvements"><span class="toc-text">Proposed Decentralization Improvements</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-On-Chain-Voting-System"><span class="toc-text">1. On-Chain Voting System</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Decentralized-Timer-Mechanism"><span class="toc-text">2. Decentralized Timer Mechanism</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Event-Driven-Real-Time-Updates"><span class="toc-text">3. Event-Driven Real-Time Updates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Advanced-Consensus-Mechanisms"><span class="toc-text">4. Advanced Consensus Mechanisms</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Content-Storage-and-Verification"><span class="toc-text">Content Storage and Verification</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Decentralized-Content-Management"><span class="toc-text">Decentralized Content Management</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Economic-Model-and-Tokenomics"><span class="toc-text">Economic Model and Tokenomics</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Multi-Layered-Incentive-System"><span class="toc-text">Multi-Layered Incentive System</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gas-Optimization-Strategies"><span class="toc-text">Gas Optimization Strategies</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Batch-Operations-and-State-Compression"><span class="toc-text">Batch Operations and State Compression</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Migration-Strategy"><span class="toc-text">Migration Strategy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Phased-Decentralization-Approach"><span class="toc-text">Phased Decentralization Approach</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/DudeGuuud">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="rss" href="/rss.xml">
+                <i class="iconfont icon-rss"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/DudeGuuud">Copyright © 2025 DudeGuuud</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文章...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + NarrFlow%3A%20A%20Journey%20Toward%20True%20Blockchain%20Decentralization + '&url=' + http%3A%2F%2Fexample.com%2F2025%2F09%2F13%2FMeAndNarrflow%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2025/09/13/MeAndNarrflow/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>

