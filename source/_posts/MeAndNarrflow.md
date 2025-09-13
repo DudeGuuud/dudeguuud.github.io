@@ -84,7 +84,7 @@ However, modern Layer1 solutions like Sui offer capabilities that make full dece
 
 **Smart Contract Limitations vs Reality:**
 
-```move
+```rust
 // Move language on Sui supports complex logic
 public entry fun complex_voting_logic(
     session: &mut VotingSession,
@@ -148,7 +148,7 @@ async function vote(sessionId, proposalIndex) {
 
 **Smart Contract Implementation:**
 
-```move
+```rust
 // Complete voting session structure
 public struct VotingSession has key, store {
     id: UID,
@@ -201,7 +201,7 @@ cron.schedule('*/30 * * * * *', () => {
 
 **Blockchain-Native Solution:**
 
-```move
+```rust
 // Anyone can trigger session finalization
 public entry fun finalize_session(
     session: &mut VotingSession,
@@ -282,7 +282,7 @@ class BlockchainVotingService {
 
 **Weighted Voting Implementation:**
 
-```move
+```rust
 public struct VoterProfile has key, store {
     id: UID,
     contributions: u64,        // Past story contributions
@@ -309,7 +309,7 @@ fun apply_quadratic_voting(raw_votes: u64): u64 {
 
 **Sybil Resistance Mechanisms:**
 
-```move
+```rust
 // Proof of contribution requirement
 public entry fun register_voter(
     registry: &mut VoterRegistry,
@@ -370,7 +370,7 @@ class ContentManager {
 
 **Content Verification:**
 
-```move
+```rust
 public struct Proposal has store, drop {
     content_hash: String,      // IPFS hash
     content_preview: String,   // First 200 characters
@@ -402,7 +402,7 @@ public fun verify_content_integrity(
 
 ### Multi-Layered Incentive System
 
-```move
+```rust
 // Dynamic reward calculation
 public fun calculate_rewards(
     session: &VotingSession,
@@ -442,7 +442,7 @@ public fun update_reputation(
 
 ### Batch Operations and State Compression
 
-```move
+```rust
 // Batch multiple votes in single transaction
 public entry fun batch_vote(
     sessions: vector<ID>,
